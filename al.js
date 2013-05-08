@@ -1,4 +1,5 @@
-  var text = "Congrat ulations Al on 35 years! Good luck! \n".split(' ');
+  var delay = 2000;
+  var text = "Congrat ulations Al on 35 years! Good luck!".split(' ');
   var hour = 0;
   var minute = 0;
   var screen = 0;
@@ -11,6 +12,7 @@ $(function(){
     minute = parseFloat($('#minute').val());
     screen = parseFloat($('#screen').val());
     num_screens = parseFloat($('#num_screens').val());
+    while (!(text.length % num_screens == 0)){text.push("")};
     $('input').hide();
     $('button').hide();
     var launchTime = getTime(hour,minute);
@@ -33,7 +35,7 @@ $(function(){
 function startShow(){
   $('#content').text(text[screen]);
   index++;
-  setInterval('changeText()',2000);
+  setInterval('changeText()',delay);
 }
 
 function changeText(){
