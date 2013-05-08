@@ -8,6 +8,13 @@ Services after having worked for the University for 35 years.
 MIS decided to record a send-off video with a typically geeky touch.
 This web-app wishes him well.
 
+Configuration
+=============
+Two variables at the top of `al.js`:
+* `delay` - amount of time between screen-chages (in ms)
+* `text` - The message to display.  The js splits on spaces, so if you
+  need blank screens, you can use another white-space character.
+
 Usage
 =====
 * Load the page in as many browser pages as you want
